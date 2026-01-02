@@ -48,12 +48,12 @@ class App(tk.Tk):
         top.columnconfigure(1, weight=1)
 
         ttk.Label(top, text="검색어").grid(row=0, column=0, sticky="w")
-        self.query_var = tk.StringVar(value="카페")
+        self.query_var = tk.StringVar()
         self.query_entry = ttk.Entry(top, textvariable=self.query_var)
         self.query_entry.grid(row=0, column=1, sticky="we", padx=(8, 12))
 
         ttk.Label(top, text="지역명").grid(row=1, column=0, sticky="w", pady=(10, 0))
-        self.loc_var = tk.StringVar(value="서울시청")
+        self.loc_var = tk.StringVar()
         self.loc_entry = ttk.Entry(top, textvariable=self.loc_var)
         self.loc_entry.grid(row=1, column=1, sticky="we", padx=(8, 12), pady=(10, 0))
 
